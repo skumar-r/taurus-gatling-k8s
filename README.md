@@ -2,7 +2,7 @@
 
 Running the Samples
 -------------------
-1. Make sure that the volumes 'configs' and 'artifacts' are updated with actual path  based on running environment
+1. Make sure that the volumes 'configs' and 'artifacts' are updated with actual path  based on running environment in the taurus-pod-.yaml and taurus-pod-template.yaml
 2. Copy the contents from 'sample-configs' folder to the 'configs' volume 
 3. To try with single pod 
     a. 'kubectl apply -f taurus-pod-.yaml' 
