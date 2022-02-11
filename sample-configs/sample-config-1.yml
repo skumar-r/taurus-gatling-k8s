@@ -1,0 +1,11 @@
+execution:
+- executor: gatling
+  scenario: sample
+  concurrency: 10
+  ramp-up: 30s
+  hold-for: 2m
+
+scenarios:
+  sample:
+    script: com/rsk/gatling/test/GoogleTestSimulation.scala
+    simulation: com.rsk.gatling.test.GoogleTestSimulation

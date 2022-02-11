@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: taurus-test-gatling
+spec:
+  #backoffLimit: 0
+  #template:
+  #  spec:
+  volumes:
+    - name: artifacts
+      hostPath:
+        path: /run/desktop/mnt/host/d/GitRepo/taurus-gatling-k8s/artifacts
+        type: DirectoryOrCreate
+    - name: configs
+      hostPath:
+        path: /run/desktop/mnt/host/d/GitRepo/taurus-gatling-k8s/sample-configs
+        type: DirectoryOrCreate
+  containers:
+    - name: gatling-test
+      image: blazemeter/taurus
+      imagePullPolicy: Always
+      args: ["sample-config-1.yml"]
+      volumeMounts:
+        - name: artifacts
+          mountPath: /tmp/artifacts
+        - name: configs
+          mountPath: /bzt-configs
+  restartPolicy: Never
