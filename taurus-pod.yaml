@@ -19,7 +19,7 @@ spec:
     - name: gatling-test
       image: blazemeter/taurus
       imagePullPolicy: Always
-      args: ["sample-config-1.yml","-report"]
+      args: ["sample-config-1.yml"]
       volumeMounts:
         - name: artifacts
           mountPath: /tmp/artifacts
