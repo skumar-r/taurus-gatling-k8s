@@ -1,0 +1,9 @@
+execution:
+- executor: gatling
+
+    
+modules:
+  gatling:
+    properties:
+      gatling.data.file.bufferSize: 512 # output buffer size, 256 bytes by default
+      gatling.core.directory.reportsOnly: "/tmp/artifacts/logs"              # disable html reporting

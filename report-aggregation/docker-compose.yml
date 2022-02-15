@@ -1,0 +1,9 @@
+version: '3'
+services:
+  report-gen-service:
+    image: gatling-report-generator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /d/GitRepo/taurus-gatling-k8s/artifacts/final-logs:/opt/gatling/results

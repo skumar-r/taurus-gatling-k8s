@@ -9,3 +9,9 @@ scenarios:
   sample:
     script: com/rsk/gatling/test/GoogleTestSimulation.scala
     simulation: com.rsk.gatling.test.GoogleTestSimulation
+    
+modules:
+  gatling:
+    properties:
+      gatling.data.file.bufferSize: 512 # output buffer size, 256 bytes by default
+      gatling.charting.noReports: "true"              # disable html reporting

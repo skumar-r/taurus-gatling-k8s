@@ -1,0 +1,9 @@
+execution:
+- executor: external-results-loader
+  data-file-pattern: /tmp/artifacts/gatling-*/simulation.log
+  wait-for-file: 5s
+  results-timeout: 5s
+
+reporting:
+- module: blazemeter
+  test: Taurus Data Loader (Gatling)
